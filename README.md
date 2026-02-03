@@ -1,40 +1,49 @@
-# Parking Fee Calculator
+# Parking Fee Calculator 🚗💸
 
-A quick, online-capable web app I vibecoded in under an hour for my friend who runs a parking garage. Built with vanilla HTML, CSS, and JavaScript using Cursor.
+A sleek, mobile-first web application for calculating parking fees. Features a modern dark UI, touch-optimized controls, and real-time calculation logic.
 
-![social share](https://github.com/user-attachments/assets/bd29bb5d-9c7b-468b-9eb1-6e7a527d25b5)
+![Dark Mode UI](https://via.placeholder.com/800x400?text=Parking+Fee+Calculator+Dark+UI)
 
+## ✨ Features
 
-## What It Does
+- **Dark Mode UI**: Professional, eye-friendly dark theme with slate and indigo accents.
+- **Mobile First Design**: Fully responsive layout with optimized touch targets (54px+), safe-area insets for notched devices, and native app-like feel.
+- **Real-time Calculation**: Fees are updated instantly as you select dates and times.
+- **Smart Logic**:
+  - **Grace Period**: First 15 minutes are free.
+  - **Standard Rate**: $5 for the first hour (after grace period).
+  - **Hourly Rate**: $2 per additional 30-minute block.
+  - **Daily Max**: Capped at $35 per 24 hours.
+- **Offline Capable**: Built with vanilla HTML/CSS/JS, no external dependencies required for core logic.
 
-- **Entry Date & Time:** Select when the customer entered.
-- **Custom Time Picker:** Hour, minute, and AM/PM dropdowns.
-- **Fee Calculation:**  
-  - First 15 minutes: Free (grace period)  
-  - Next 45 minutes (up to 60 minutes total): $5  
-  - After 60 minutes: $2 per additional 30-minute block  
-  - Maximum per 24 hours: $35
-- **Real-time Updates:** Fee updates as you change the entry time.
-- **Clear Button:** Reset for the next customer.
-- **Mobile-friendly:** Works on any device.
+## 📱 How to Use
 
-## How to Use
+1. **Select Entry Date**: Tap the date input to choose when the vehicle entered.
+2. **Select Entry Time**: Use the custom dropdowns for Hour, Minute, and AM/PM.
+3. **View Fee**: The total fee is displayed instantly above the reset button.
+4. **Reset**: Tap "RESET CALCULATOR" to clear the form and start over.
 
-1. Open `index.html` in any modern web browser.
-2. Select the entry date and time.
-3. The fee calculates automatically.
-4. Use the "Clear" button to reset.
+## 🛠️ Technologies
 
-## Files
+- **HTML5**: Semantic structure.
+- **CSS3**: Custom properties (variables), Flexbox, CSS Grid, and responsive media queries.
+- **JavaScript (ES6+)**: Date manipulation and fee calculation logic.
+- **Fonts**: [Poppins](https://fonts.google.com/specimen/Poppins) via Google Fonts.
+- **Icons**: [FontAwesome 6](https://fontawesome.com/).
 
-- `index.html` — HTML structure
-- `style.css` — CSS styles
-- `app.js` — JavaScript logic
+## 🚀 Installation
 
-## Live Demo
+Simply clone the repository and open `index.html` in your browser.
 
-Check it out at [https://parking.aristotle.me](https://parking.aristotle.me)
+```bash
+git clone https://github.com/aristotle-malichetty/parking-fee-calculator.git
+cd parking-fee-calculator
+# Open index.html
+```
 
-## License
+## 📄 License
 
-MIT
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+*Based on the original logic by [aristotle-malichetty](https://github.com/aristotle-malichetty).*

@@ -4,36 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parking Fee Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Social Share Image (Open Graph) -->
     <meta property="og:image" content="https://pagemaker.b-cdn.net/media/126844/1880x1576.jpg">
     <meta property="og:title" content="Parking Fee Calculator">
     <meta property="og:description" content="Quickly calculate parking fees with daily max and grace period.">
+    <meta name="theme-color" content="#0f172a">
 </head>
 <body>
-    <div class="container">
-        <h1>Parking Fee Calculator</h1>
-        <div class="input-group">
-            <label for="entry-date">Entry Date:</label>
-            <input type="date" id="entry-date" required>
-        </div>
-        <div class="input-group">
-            <label for="entry-time">Entry Time:</label>
-            <div class="time-input">
-                <select id="hour-select"></select> :
-                <select id="minute-select"></select>
-                <select id="ampm-select">
-                    <option value="AM">AM</option>
-                    <option value="PM">PM</option>
-                </select>
+    <div class="app-container">
+        <header>
+            <h1>Parking Fee Calculator</h1>
+        </header>
+
+        <div class="card-body">
+            <div class="input-section">
+                <div class="section-header">
+                    <label>ENTRY DATE</label>
+                    <i class="far fa-calendar-alt"></i>
+                </div>
+                <div class="control-group">
+                    <input type="date" id="entry-date" required>
+                </div>
             </div>
+
+            <div class="input-section">
+                <div class="section-header">
+                    <label>ENTRY TIME</label>
+                    <i class="far fa-clock"></i>
+                </div>
+                <div class="time-controls">
+                    <div class="select-wrapper">
+                        <select id="hour-select"></select>
+                        <i class="fas fa-chevron-down select-icon"></i>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="select-wrapper">
+                        <select id="minute-select"></select>
+                        <i class="fas fa-chevron-down select-icon"></i>
+                    </div>
+                    <div class="select-wrapper ampm-wrapper">
+                        <select id="ampm-select">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                        <i class="fas fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="error-message" id="error-message"></div>
+
+            <div class="display-container">
+                <div class="fee-label">TOTAL FEE</div>
+                <div class="fee-amount" id="fee-amount">$0.00</div>
+            </div>
+
+            <button id="clear-btn">
+                RESET CALCULATOR
+                <i class="fas fa-redo-alt"></i>
+            </button>
         </div>
-        <div class="fee-display">
-            <div class="fee-amount" id="fee-amount">$0.00</div>
-            <div class="fee-label">Total Parking Fee</div>
-        </div>
-        <button id="clear-btn">Clear</button>
-        <div class="error-message" id="error-message"></div>
     </div>
     <script src="app.js"></script>
 </body>
