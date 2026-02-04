@@ -115,7 +115,9 @@ header h1 {
 /* Input Styling */
 input[type="date"] {
     width: 100%;
+    max-width: 100%; /* Ensure it never exceeds parent width */
     padding: 15px;
+    height: 54px; /* Ensure ample touch target */
     background-color: var(--input-bg);
     border: 2px solid transparent;
     border-radius: 12px;
@@ -123,9 +125,14 @@ input[type="date"] {
     font-size: 1.1rem;
     outline: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
     /* Customizing the calendar icon for webkit */
     color-scheme: dark;
+    /* Prevent auto-zoom on iOS */
+    touch-action: manipulation;
+    /* Prevent layout shifts */
+    will-change: border-color;
+    box-sizing: border-box; /* Reinforce box-sizing */
 }
 
 input[type="date"]:focus {
